@@ -93,8 +93,22 @@ public class Algorithm {
         ArrayController.arrayPrint(array);
     }
 
-    
+    public static int factorialRecursive(int number) {
+        if (number == 1) {
+            return 1;
+        } else {
+            return number * factorialRecursive(number - 1);
+        }
 
+    }
+
+    public static int fibonacciRecursive(int number) {
+        if (number > 2) {
+            return fibonacciRecursive(number - 1) + fibonacciRecursive(number - 2);
+        } else {
+            return 1;
+        }
+    }
 
 
 }
