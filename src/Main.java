@@ -5,6 +5,6 @@ public class Main {
         int[] array = ArrayController.arrayFilling(100, 1000);
         Algorithm.bubbleSort(array);
         Algorithm.binarySearchRecursive(23, array, 0, 100);
-
+        System.out.println();
     }
 }
