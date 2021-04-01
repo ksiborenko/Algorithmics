@@ -126,6 +126,10 @@ public class Algorithm {
             System.out.println("Not found");
         }
     }
+
+    public static void quickSort () {
+
+    }
 }
 
 
