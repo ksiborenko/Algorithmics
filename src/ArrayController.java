@@ -3,11 +3,11 @@ import java.util.Random;
 
 public class ArrayController {
 
-    public static int[] arrayFilling(int arraySize) {
+    public static int[] arrayFilling(int arraySize, int numbersRange) {
         Random random = new Random();
         int[] array = new int[arraySize];
         for (int arrayIndex = 0; arrayIndex < arraySize; arrayIndex++) {
-            array[arrayIndex] = random.nextInt(1000) - 500;
+            array[arrayIndex] = random.nextInt(numbersRange);
         }
         return array;
     }

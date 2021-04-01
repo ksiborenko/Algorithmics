@@ -110,5 +110,22 @@ public class Algorithm {
         }
     }
 
-
+    public static void binarySearchRecursive(int x, int[] sortedNumbers, int start, int end) {
+        if (start <= end) {
+            int mid = (end - start) / 2 + start;
+            if (sortedNumbers[mid] == x) {
+                System.out.println("Found on position " + (mid + 1));
+            }
+            if (sortedNumbers[mid] > x) {
+                binarySearchRecursive(x, sortedNumbers, start, mid - 1);
+            }
+            if (sortedNumbers[mid] < x) {
+                binarySearchRecursive(x, sortedNumbers, mid + 1, end);
+            }
+        } else if (start > end) {
+            System.out.println("Not found");
+        }
+    }
 }
+
+

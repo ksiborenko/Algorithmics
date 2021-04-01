@@ -1,7 +1,10 @@
 public class Main {
-    public static void main (String [] args) {
+    public static void main(String[] args) {
 
-        System.out.print(Algorithm.fibonacciRecursive(20));
+
+        int[] array = ArrayController.arrayFilling(100, 100);
+        Algorithm.bubbleSort(array);
+        Algorithm.binarySearchRecursive(23, array, 0, 100);
 
     }
 }
