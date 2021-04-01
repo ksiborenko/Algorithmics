@@ -110,19 +110,19 @@ public class Algorithm {
         }
     }
 
-    public static void binarySearchRecursive(int x, int[] sortedNumbers, int start, int end) {
-        if (start <= end) {
-            int mid = (end - start) / 2 + start;
-            if (sortedNumbers[mid] == x) {
+    public static void binarySearchRecursive(int search, int[] array, int begin, int end) {
+        if (begin <= end) {
+            int mid = (end - begin) / 2 + begin;
+            if (search < array[mid]) {
+                binarySearchRecursive(search, array, begin, mid - 1);
+            } else if (search > array[mid]) {
+                binarySearchRecursive(search, array, mid + 1, end);
+            } else if (search == array[mid]) {
                 System.out.println("Found on position " + (mid + 1));
             }
-            if (sortedNumbers[mid] > x) {
-                binarySearchRecursive(x, sortedNumbers, start, mid - 1);
-            }
-            if (sortedNumbers[mid] < x) {
-                binarySearchRecursive(x, sortedNumbers, mid + 1, end);
-            }
-        } else if (start > end) {
+        }
+        if (begin > end) {
+            System.out.println();
             System.out.println("Not found");
         }
     }
